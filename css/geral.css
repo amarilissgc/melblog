@@ -1,0 +1,7 @@
+#corpo{
+    background-color: rgb(192, 133, 170);
+    border: 5px solid rgb(165, 101, 137);
+    width: 600px;
+    margin: 0 auto;
+    padding: 0 200px 1000px 200px;
+}
