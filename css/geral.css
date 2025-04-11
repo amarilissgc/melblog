@@ -1,43 +1,103 @@
-#corpo{
-    border: 3px solid rgba(255, 0, 191, 0.795);
+#corpo {
+    border: 3px solid rgb(247, 107, 165);
+    background-color: rgba(255, 127, 191, 0.377);
     width: auto;
     height: auto;
 }
-#topo{
-    border: 3px solid rgb(174, 0, 255);
+
+#topo {
+    border: 3px solid rgb(247, 107, 165);
+    background-color: rgba(255, 127, 191, 0.377);
     width: auto;
     height: 150px;
+    text-align: center;
 }
-#esquerda{
-    border: 3px solid rgb(0, 255, 55);
+
+#menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    min-height: 50px;
+    background-color: rgba(255, 127, 191, 0.377);
+    color: rgb(104, 19, 69);
+    text-align: center;
+    line-height: 50px;
+    font-weight: bold;
+}
+
+.botao {
+    padding: 10px 20px;
+    border: 3px solid rgb(247, 107, 165);
+    background-color: rgba(255, 127, 191, 0.377);
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.botao:hover {
+    background-color: rgba(255, 127, 191, 0.377);
+}
+
+#conteudo {
+    display: flex;
+    justify-content: space-between;
+}
+
+#esquerda {
+    border: 3px solid rgb(247, 107, 165);
+    background-color: rgba(255, 127, 191, 0.377);
     height: 750px;
     width: 24%;
     min-width: 250px;
     display: inline-block;
     vertical-align: top;
+    text-align: center;
 }
-#centro{
-    border: 3px solid rgba(4, 0, 255, 0.623);
+
+#centro {
+    border: 3px solid rgb(247, 107, 165);
+    background-color: rgba(255, 127, 191, 0.377);
     height: 750px;
     width: 50%;
     min-width: 250px;
     display: inline-block;
     vertical-align: top;
+
 }
-#direita{
-    border: 3px solid rgb(0, 204, 255);
+
+#direita {
+    border: 3px solid rgb(247, 107, 165);
+    background-color: rgba(255, 127, 191, 0.377);
     height: 750px;
     width: 24%;
     min-width: 250px;
     display: inline-block;
     vertical-align: top;
-
-
-   
+    text-align: center;
 }
-#rodape{
-    border: 3px solid rgb(255, 238, 0);
+
+#rodape {
+    border: 3px solid rgb(247, 107, 165);
+    background-color: rgba(255, 127, 191, 0.377);
     width: auto;
     height: 25px;
     display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+img {
+    width: 100px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.img-lateral {
+    width: 350px; 
+    height: auto;
+    margin-top: 20px;
 }
