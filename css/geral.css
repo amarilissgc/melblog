@@ -135,3 +135,17 @@ footer {
         height: auto;
     }
 }
+
+.conteudo-verde {
+    background-color: #e1faba;  /* Cor verde claro */
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+.conteudo-verde h3 {
+    color: #46db29; /* Cor verde escuro para o título */
+}
+.conteudo-verde p {
+    color: #358026; /* Cor do texto */
+    font-size: 1.1em;
+}
