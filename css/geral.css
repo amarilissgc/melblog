@@ -1,103 +1,137 @@
-#corpo {
-    border: 3px solid rgb(247, 107, 165);
-    background-color: rgba(255, 127, 191, 0.377);
-    width: auto;
-    height: auto;
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-#topo {
-    border: 3px solid rgb(247, 107, 165);
-    background-color: rgba(255, 127, 191, 0.377);
-    width: auto;
-    height: 150px;
+/* Corpo da página */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #49ac30;
+    color: #e1faba;
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #e1faba;
+    color: #46db29;
+    padding: 20px 0;
     text-align: center;
 }
 
-#menu {
+.container-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.logo {
+    max-width: 100px;
+    margin-bottom: 10px;
+}
+
+/* Navegação */
+.nav-bar {
+    margin-top: 10px;
     display: flex;
     justify-content: center;
-    align-items: center;
     gap: 20px;
-    width: 100%;
-    min-height: 50px;
-    background-color: rgba(255, 127, 191, 0.377);
-    color: rgb(104, 19, 69);
-    text-align: center;
-    line-height: 50px;
+    flex-wrap: wrap;
+}
+
+.nav-bar a {
+    color: #46db29;
+    text-decoration: none;
     font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 4px;
+    transition: background 0.3s ease, transform 0.2s ease-in-out;
 }
 
-.botao {
-    padding: 10px 20px;
-    border: 3px solid rgb(247, 107, 165);
-    background-color: rgba(255, 127, 191, 0.377);
-    border-radius: 5px;
-    cursor: pointer;
+.nav-bar a:hover {
+    background-color: #2c8820;
+    transform: scale(1.1);
+}
+
+/* Introdução */
+.intro {
     text-align: center;
-    transition: background-color 0.3s;
+    padding: 30px 15px;
+    background: #46db29;
+    margin: 20px 0;
+    border-radius: 8px;
 }
 
-.botao:hover {
-    background-color: rgba(255, 127, 191, 0.377);
+.intro h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
 }
 
-#conteudo {
+.intro p {
+    font-size: 1.2em;
+    color: #e1faba;
+}
+
+/* Conteúdo principal */
+.conteudo {
     display: flex;
-    justify-content: space-between;
-}
-
-#esquerda {
-    border: 3px solid rgb(247, 107, 165);
-    background-color: rgba(255, 127, 191, 0.377);
-    height: 750px;
-    width: 24%;
-    min-width: 250px;
-    display: inline-block;
-    vertical-align: top;
-    text-align: center;
-}
-
-#centro {
-    border: 3px solid rgb(247, 107, 165);
-    background-color: rgba(255, 127, 191, 0.377);
-    height: 750px;
-    width: 50%;
-    min-width: 250px;
-    display: inline-block;
-    vertical-align: top;
-
-}
-
-#direita {
-    border: 3px solid rgb(247, 107, 165);
-    background-color: rgba(255, 127, 191, 0.377);
-    height: 750px;
-    width: 24%;
-    min-width: 250px;
-    display: inline-block;
-    vertical-align: top;
-    text-align: center;
-}
-
-#rodape {
-    border: 3px solid rgb(247, 107, 165);
-    background-color: rgba(255, 127, 191, 0.377);
-    width: auto;
-    height: 25px;
-    display: flex;
-    align-items: center;
+    flex-wrap: wrap;
     justify-content: center;
+    gap: 20px;
+    padding: 40px 20px;
+    background-color: #e1faba;
 }
 
-img {
-    width: 100px;
-    height: auto;
-    display: block;
-    margin: 0 auto;
+.coluna {
+    flex: 1;
+    min-width: 280px;
+    max-width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
 }
 
 .img-lateral {
-    width: 350px; 
+    width: 100%;
     height: auto;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.img-lateral:hover {
+    transform: scale(1.05);
+}
+
+.video video {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #46db29;
+    color: #fff;
+    font-size: 14px;
     margin-top: 20px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .conteudo {
+        flex-direction: column;
+    }
+
+    .video video {
+        max-width: 100%;
+        height: auto;
+    }
 }
