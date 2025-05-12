@@ -1,4 +1,3 @@
-/* Reset */
 * {
     margin: 0;
     padding: 0;
@@ -14,7 +13,6 @@ html, body {
     overflow-x: hidden;
 }
 
-/* Layout principal em tela cheia */
 #corpo {
     display: flex;
     flex-direction: column;
@@ -22,8 +20,7 @@ html, body {
     background-color: #1a3321;
 }
 
-/* TOPO: Logo, título e slogan */
-/* Estilos para o novo topo */
+
 #topo {
     background: linear-gradient(135deg, #1a3a20, #2d5e3a);
     padding: 20px 5%;
@@ -112,7 +109,6 @@ html, body {
     height: 60px;
 }
 
-/* Responsividade */
 @media (max-width: 768px) {
     .topo-container {
         flex-direction: column;
@@ -158,7 +154,6 @@ html, body {
     transform: scale(1.05);
 }
 
-/* CONTEÚDO central flexível e espaçado */
 #conteudo {
     flex: 1;
     display: flex;
@@ -167,6 +162,19 @@ html, body {
     padding: 40px 5vw;
     gap: 40px;
     background-color: #122416;
+    animation: aparecer 1s ease-in-out;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 }
 
 #esquerda,
@@ -206,7 +214,6 @@ html, body {
     color: #dcedc8;
 }
 
-/* Rodapé */
 #rodape {
     background-color: #1b2f1f;
     padding: 15px;
