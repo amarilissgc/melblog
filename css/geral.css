@@ -23,7 +23,7 @@ html, body {
 
 #topo {
     background: linear-gradient(135deg, #1a3a20, #2e7047);
-    padding: 40px 5% 60px;
+    padding: 50px 5% 70px;
     position: relative;
     overflow: hidden;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
@@ -31,10 +31,8 @@ html, body {
 }
 
 .topo-container {
-    max-width: 1200px;
-    margin: 0 auto;
     display: flex;
-    justify-content: flex-start; /* Alinha à esquerda */
+    justify-content: spa;
     align-items: center;
     flex-wrap: nowrap;
     gap: 20px;
@@ -174,7 +172,6 @@ html, body {
     }
 }
 
-#esquerda,
 #centro {
     background-color: #1d2d21;
     border: 2px solid #4caf50;
@@ -184,14 +181,19 @@ html, body {
 }
 
 #esquerda {
-    width: 300px;
-    text-align: center;
+    flex: 1;
+    max-width: 380px; /* ou ajuste conforme seu layout */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .img-lateral {
-    width: 100%;
-    border-radius: 10px;
-    border: 2px solid #66bb6a;
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px; /* bordas arredondadas, opcional */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* sombra suave, opcional */
+    object-fit: cover;
 }
 
 #centro {
@@ -219,3 +221,90 @@ html, body {
     color: #a5d6a7;
     border-top: 1px solid #4caf50;
 }
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #122416;
+    color: #ffffff;
+}
+
+.contato-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 40px;
+    background: linear-gradient(rgba(18,36,22,0.85), rgba(18,36,22,0.85)), 
+            url('../imagens/turma.jpg') center/cover no-repeat;
+
+}
+
+.form-box {
+    background-color: rgba(30, 58, 37, 0.9);
+    padding: 40px;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+}
+
+.form-box h2 {
+    text-align: center;
+    color: #a0f5b6;
+    margin-bottom: 30px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #d4ffd8;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #dfffe4;
+    color: #000;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #4caf50, #81c784);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.03);
+    background: linear-gradient(135deg, #43a047, #66bb6a);
+}
+
+.voltar {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.voltar a {
+    color: #a0f5b6;
+    text-decoration: none;
+}
+
+.voltar a:hover {
+    text-decoration: underline;
+}
+
