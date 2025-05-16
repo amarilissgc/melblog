@@ -22,75 +22,64 @@ html, body {
 
 
 #topo {
-    background: linear-gradient(135deg, #1a3a20, #2d5e3a);
-    padding: 20px 5%;
+    background: linear-gradient(135deg, #1a3a20, #2e7047);
+    padding: 40px 5% 60px;
     position: relative;
     overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    border-bottom: 2px solid #4caf50;
 }
 
 .topo-container {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start; /* Alinha à esquerda */
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     gap: 20px;
 }
 
 .logo-container {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 20px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
 
 .logo {
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 70px;
     object-fit: contain;
-    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.4));
+    border-radius: 50%;
+    background-color: #2e7047;
+    padding: 5px;
 }
 
 .titulo-container h1 {
-    font-size: 2.2rem;
-    color: #fff;
-    margin-bottom: 5px;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    font-size: 2rem;
+    color: #ffffff;
+    margin-bottom: 3px;
     font-weight: 700;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.4);
+    text-align: left;
 }
 
 .titulo-container h2 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: #a5d6a7;
-    margin-bottom: 8px;
     font-weight: 500;
+    text-align: left;
 }
 
 .slogan {
-    font-size: 1rem;
-    color: #e8f5e9;
+    font-size: 0.9rem;
+    color: #d0f0d0;
     font-style: italic;
-    opacity: 0.9;
-}
-
-.social-icons {
-    display: flex;
-    gap: 15px;
-}
-
-.social-icons a {
-    color: #e8f5e9;
-    font-size: 1.5rem;
-    transition: all 0.3s ease;
-    opacity: 0.8;
-}
-
-.social-icons a:hover {
-    color: #fff;
-    opacity: 1;
-    transform: translateY(-3px);
+    margin-top: 3px;
+    opacity: 0.95;
+    text-align: left;
 }
 
 .onda-separadora {
@@ -98,35 +87,44 @@ html, body {
     bottom: 0;
     left: 0;
     width: 100%;
-    overflow: hidden;
     line-height: 0;
 }
 
 .onda-separadora svg {
     position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
+    width: 100%;
     height: 60px;
+    display: block;
 }
 
 @media (max-width: 768px) {
     .topo-container {
         flex-direction: column;
-        text-align: center;
+        align-items: flex-start; /* Alinha à esquerda também no mobile */
+        text-align: left;
     }
-    
+
     .logo-container {
-        justify-content: center;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
     }
-    
+
     .titulo-container h1 {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
-    
+
     .titulo-container h2 {
-        font-size: 1.2rem;
+        font-size: 1rem;
+    }
+
+    .slogan {
+        font-size: 0.8rem;
     }
 }
+
+
+
 
 #menu {
     display: flex;
@@ -174,7 +172,6 @@ html, body {
         opacity: 1;
         transform: translateY(0);
     }
-}
 }
 
 #esquerda,
