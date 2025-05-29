@@ -7,6 +7,48 @@
     <link rel="stylesheet" href="css/geral.css">
     <link rel="stylesheet" href="css/contato.css">
 </head>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const form = document.querySelector("form");
+
+        form.addEventListener("submit", function(event) {
+            const nome = document.getElementById("nome").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const telefone = document.getElementById("telefone").value.trim();
+            const mensagem = document.getElementById("mensagem").value.trim();
+
+            if (nome.length < 3) {
+                alert("Por favor, insira um nome com pelo menos 3 caracteres.");
+                event.preventDefault();
+                return;
+            }
+
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert("Por favor, insira um e-mail válido.");
+                event.preventDefault();
+                return;
+            }
+
+            const telefoneNumeros = telefone.replace(/\D/g, '');
+            if (telefoneNumeros.length < 8) {
+                alert("Por favor, insira um telefone válido com pelo menos 8 números.");
+                event.preventDefault();
+                return;
+            }
+
+            if (mensagem === "") {
+                alert("Por favor, escreva uma mensagem.");
+                event.preventDefault();
+                return;
+            }
+
+            alert("Formulário enviado com sucesso!");
+        });
+    });
+</script>
+
     <body>
         <header id="topo">
             <div class="topo-container">
@@ -47,7 +89,9 @@
             <div class="contato-wrapper">
                 <div class="form-box">
                     <h2>Fale com a Turma 💬</h2>
-                    <form action="mailto:seudemail@ifto.edu.br" method="POST" enctype="text/plain">
+                    <form id="formularioContato" action="processa_formulario.php" method="POST">
+                    </form>
+                    
                         <label for="nome">Nome:</label>
                         <input type="text" id="nome" name="nome" required>
             
@@ -66,8 +110,8 @@
                 </div>
             </div>
             
-
-            
+            <link rel="stylesheet" href="css/geral.css">
+           
             
 
 <div id="rodape">
