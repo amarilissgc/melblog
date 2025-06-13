@@ -32,7 +32,7 @@ html, body {
 
 .topo-container {
     display: flex;
-    justify-content: spa;
+    justify-content: space-between;
     align-items: center;
     flex-wrap: nowrap;
     gap: 20px;
@@ -59,8 +59,8 @@ html, body {
     font-size: 2rem;
     color: #ffffff;
     margin-bottom: 3px;
+    text-shadow: none;
     font-weight: 700;
-    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.4);
     text-align: left;
 }
 
@@ -647,3 +647,142 @@ footer {
     line-height: 1.6;
     font-family: 'Merriweather', serif;
 }
+
+.galeria-titulo {
+    text-align: center;
+    margin-top: 50px;
+    font-family: 'Merriweather', serif;
+}
+
+.galeria-titulo h1 {
+    font-size: 2.2em;
+    margin-bottom: 10px;
+    color: #2e7d32;
+}
+
+.galeria-titulo p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+.galeria-fotos {
+    column-count: 3;
+    column-gap: 15px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.foto-card {
+    break-inside: avoid;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background:  rgba(30, 58, 37, 1);
+    transition: transform 0.3s;
+}
+
+.foto-card:hover {
+    transform: scale(1.02);
+}
+
+.foto-card img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+.topo-secao {
+    background: linear-gradient(135deg, #1a3a20, #2e7047);
+    padding: 50px 5%;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    font-family: 'Merriweather', serif;
+}
+
+.topo-secao h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #a5ff99;
+    animation: fadeIn 1s ease forwards;
+}
+
+.topo-secao p {
+    font-size: 1.1rem;
+    color: #a5d6a7;
+    animation: fadeIn 1.5s ease forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.topo-secao {
+    background: linear-gradient(135deg, #1a3a20, #2e7047);
+    padding: 50px 5%;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.topo-secao h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color:#46db29;
+    animation: fadeIn 1s ease forwards;
+}
+
+.topo-secao p {
+    font-size: 1.1rem;
+    color: #a5d6a7;
+    animation: fadeIn 1.5s ease forwards;
+}
+
+.titulo-professores {
+    font-size: 2.8rem;
+    color: #46db29;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    margin: 40px 0 30px;
+    animation: fadeIn 1s ease forwards;
+    letter-spacing: 1px;
+}
+
+.faixa-agradecimento {
+
+    background: linear-gradient(135deg, #1a3a20, #2e7047);
+    padding: 50px 5%;
+    text-align: center;
+
+    font-family: 'Poppins', sans-serif;
+
+
+}
+
+.titulo-professores {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color:#46db29;
+    animation: fadeIn 1s ease forwards;
+
+}
+
+.subtitulo-professores {
+    font-size: 1.1rem;
+    color: #a5d6a7;
+    animation: fadeIn 1.5s ease forwards;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
